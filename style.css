@@ -6,17 +6,18 @@
 
 #navbar {
   height: 12vh;
+  position:relative;
 }
 /*5. Hero Sections*/
 
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(image/hero-image.jpg);
+    url(image/hero-option2.jpg);
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
+  position:sticky;
 }
 
 .hero-text {
@@ -33,12 +34,106 @@
   font-weight: 800;
 }
 
-#map{
-  margin: 50px;
+#form-section{
+  background-color:rgb(233, 233, 233) ;
 
 }
+
+form{
+
+    width: 500px;
+    margin: 0 auto;
+
+    padding: 50px;
+   background-color: rgb(215, 208, 190);
+}
+
+div.elem-group {
+  margin: 20px 0;
+}
+
+div.elem-group.inlined {
+  width: 49%;
+
+  float: left;
+  margin-left: 1%;
+}
+
+label {
+  display: block;
+  font-family: 'Nanum Gothic';
+  padding-bottom: 10px;
+  font-size: 1.25em;
+}
+
+input, select, textarea {
+  border-radius: 2px;
+  border: 2px solid #777;
+  box-sizing: border-box;
+  font-size: 1.25em;
+  font-family: 'Nanum Gothic';
+  width: 100%;
+  padding: 10px;
+}
+
+div.elem-group.inlined input {
+  width: 95%;
+  display: inline-block;
+}
+
+textarea {
+  height: 250px;
+}
+
+hr {
+  border: 1px dotted #ccc;
+}
+
+button {
+  height: 50px;
+  background: rgb(94, 168, 88);
+  border: none;
+  color: white;
+  font-size: 1.25em;
+  font-family: 'Nanum Gothic';
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  border: 2px solid rgb(31, 28, 20);
+}
+
 #footer{
+background-color: #9c8662;
+
+}
+
+#footer-info{
   display: flex;
+  flex-direction:row;
+  justify-content: space-around;
+  color: white;
+  row-gap: 30px;
+
+  direction: rtl;
+  text-align: left;
+}
+#map{
+  margin-top: 40px;
+}
+#contact-info{
+  margin-top: 40px;
+}
+#social-media{
+  background-color: rgb(233, 233, 233) ;
+  display: flex;
+justify-content: center;
+column-gap: 30px;
+}
+#social {
+  padding: 20px;
+  color: rgb(76, 66, 34);
 }
 
 /*Adjusting image height to fit all screens on all devices, top to down*/

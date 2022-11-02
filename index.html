@@ -13,6 +13,8 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
+    <!--Font awesome icon cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   </head>
   <body>
     <!--Navbar-->
@@ -50,16 +52,57 @@
         Lorem ipsum dolor sit amet.
       </div>
     </section>
-    <section></section>
+
+    <!--Booking form -->
+    <section id="form-section" >
+      <form action="#" method="post">
+        <div class="elem-group">
+          <label for="name">Full name</label>
+          <!-- The pattern attribute specifies a regular expression that the <input> element's value is checked against on form submission-->
+          <input type="text" id="name" name="visitor_name" placeholder="John Doe" pattern=[A-Z\sa-z]{3,20} required>
+        </div>
+        <div class="elem-group">
+          <label for="email">Your E-mail</label>
+          <input type="email" id="email" name="visitor_email" placeholder="john.doe@email.com" required>
+        </div>
+        <div class="elem-group">
+          <label for="phone">Your Phone Number</label>
+          <input type="tel" id="phone" name="visitor_phone" placeholder="07 508 666 22" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+        </div>
+        <hr>
+        <div class="elem-group inlined">
+          <label for="adult">Guests</label>
+          <input type="number" id="guest" name="total_guests" placeholder="2" min="1" required>
+        </div>
+
+
+        <div class="elem-group">
+          <label for="food-selection">Select food Preference</label>
+          <select id="food-selection" name="food_preference" required>
+              <option value="">Choose cuisine from the List</option>
+              <option value="Indi">Indian Cuisine </option>
+              <option value="Kor">Korean Cuisine</option>
+              <option value="phil">Philippines Cuisine</option>
+          </select>
+        </div>
+        <hr>
+        <div class="elem-group">
+          <label for="message">Anything Else?</label>
+          <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important." required></textarea>
+        </div>
+        <button type="submit">Book The Table</button>
+      </form>
+    </section>
 
 
 
 
     <footer id="footer">
+      <div id="footer-info">
       <div id="map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8138.1700914690655!2d18.0406068!3d59.3405913!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe6fa9330d392571e!2sTake%20ramen!5e0!3m2!1sen!2skr!4v1667374114599!5m2!1sen!2skr" width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-      <div>
+      <div id="contact-info">
       <h2>
         Find us </h2>
         <p>Guest street 5 <br> 122 34 London</p>
@@ -70,6 +113,13 @@
         <h2>Opening Hours</h2>
         <p> Monday-Friday 11:30 - 20:00 <br> Weekends: 12:30 - 20:00</p>
       </div>
+    </div>
+    <div id="social-media">
+
+<!-- Add font awesome icons -->
+<a href="#" id="social"><i  class="fa-brands fa-instagram"></i></a>
+<a href="#" id="social"><i  class="fa-brands fa-facebook"></i></a>
+    </div>
 
     </footer>
 
